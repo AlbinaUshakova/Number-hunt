@@ -1,21 +1,48 @@
 # Number Hunt 99
 
-Minimal browser puzzle game about scanning a board and finding the right numbers under different rules.
+Number Hunt 99 is a minimalist browser puzzle about fast visual scanning.
 
-## What It Is
+Pick a rule, read the target, search the board, and clear the right numbers before mistakes slow you down.
 
-`Number Hunt 99` is a single-page HTML/CSS/JS game with:
+## Highlights
 
-- two board sizes: `49` and `99`
-- two board modes: `Classic` and `Shifting`
-- multiple rule categories: `Order`, `Filters`, `Patterns`, `Logic`, `Speed`
-- English / Russian UI toggle
+- Two board sizes: `49` and `99`
+- Two run modes: `Classic` and `Shifting`
+- Multiple rule families: `Order`, `Filters`, `Patterns`, `Logic`, `Speed`
+- English / Russian interface toggle
+- Local progression, best times, and recent runs
+- Static HTML/CSS/JS project with no build step
+
+## Core Modes
+
+### Board Size
+
+- `49` — short, faster runs
+- `99` — full-board, longer runs
+
+### Run Mode
+
+- `Classic` — the board stays stable
+- `Shifting` — the board reshuffles after correct picks
+
+## Rule Categories
+
+- `Order` — sequence matters
+- `Filters` — find matching numbers in any order
+- `Patterns` — digit-based rules
+- `Logic` — number families and structured sequences
+- `Speed` — high-pressure runs like `Sudden Death`
+
+## Tech
+
+- `index.html` — application markup
+- `styles.css` — layout, responsive behavior, visual style
+- `app.js` — game logic, localization, rendering, progression
+- `vercel.json` — static deployment config
 
 ## Run Locally
 
-This project has no build step.
-
-You can open `index.html` directly in the browser, or run a simple local server from the project folder:
+Open `index.html` directly in a browser, or start a small local server:
 
 ```bash
 python3 -m http.server 8000
@@ -27,33 +54,8 @@ Then open:
 http://localhost:8000
 ```
 
-## Project Structure
-
-- `index.html` — app markup
-- `styles.css` — visual style and responsive layout
-- `app.js` — game logic, localization, progression, UI rendering
-- `vercel.json` — static deployment config
-
-## Current Gameplay Setup
-
-### Board Size
-
-- `49` — smaller, faster runs
-- `99` — full board, longer runs
-
-### Modes
-
-- `Classic` — stable board
-- `Shifting` — board reshuffles after correct picks
-
-### Rule Types
-
-- `Order` — sequence matters
-- `Filters` — pick matching numbers in any order
-- `Patterns` — digit-based rules
-- `Logic` — special number families and sequences
-- `Speed` — pressure mode like `Sudden Death`
-
 ## Deployment
 
-The project is ready for static hosting and includes `vercel.json` for Vercel deployment.
+This project is ready for static hosting.
+
+It already includes a `vercel.json` config for Vercel deployment.
