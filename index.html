@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Hunt 99</title>
+  <meta
+    name="description"
+    content=""
+  >
+  <meta name="theme-color" content="#16120f">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Number Hunt 99">
+  <meta property="og:description" content="">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Courier+Prime:wght@400;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="nh">
+    <div class="nh-top">
+      <div class="nh-top-copy">
+        <span class="nh-top-kicker" id="top-kicker"></span>
+        <div class="nh-top-title">NUMBER HUNT 99</div>
+      </div>
+      <div class="nh-top-actions">
+        <div class="nh-lang" id="lang-toggle" aria-label="Language">
+          <button class="on" data-lang="en" type="button">EN</button>
+          <button data-lang="ru" type="button">RU</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="nh-body">
+      <aside class="nh-sidebar" id="sidebar"></aside>
+      <button class="nh-side-toggle" id="menu-btn" type="button" aria-label="">
+        <span></span>
+        <span></span>
+      </button>
+
+      <main class="nh-main">
+        <div class="nh-list" id="list-view">
+          <div class="nh-list-head">
+            <div class="nh-list-head-copy">
+              <div class="nh-list-title" id="list-title"></div>
+              <div class="nh-list-sub" id="list-sub"></div>
+            </div>
+            <div class="nh-list-controls">
+              <div class="nh-filt" id="filt">
+                <div class="nh-filt-lbl" id="field-label"></div>
+                <div class="nh-filt-row">
+                  <button class="on" data-field="49" type="button"><span>49</span><small id="field-49-desc"></small></button>
+                  <button data-field="99" type="button"><span>99</span><small id="field-99-desc"></small></button>
+                </div>
+              </div>
+              <div class="nh-mods" id="mods">
+                <div class="nh-filt-lbl" id="mode-label"></div>
+                <div class="nh-mods-row">
+                  <button class="on" data-mod="none" type="button"><span id="mod-none-label"></span><small id="mod-none-desc"></small></button>
+                  <button data-mod="shift" type="button"><span id="mod-shift-label"></span><small id="mod-shift-desc"></small></button>
+                </div>
+                <div class="nh-ctrl-note" id="mode-note"></div>
+              </div>
+            </div>
+          </div>
+          <div class="nh-cards" id="cards">
+          </div>
+          <div class="nh-archive-panel" id="archive-panel"></div>
+        </div>
+
+        <div class="nh-game" id="game-view">
+          <div class="nh-game-paper">
+            <div class="nh-game-topbar">
+              <div class="nh-game-actions">
+                <button class="nh-back" id="back-btn" type="button"></button>
+                <button class="nh-replay" id="replay-btn" type="button"></button>
+              </div>
+              <div class="nh-game-title" id="gv-title" data-rule-label=""></div>
+              <div class="nh-stats">
+                <div class="nh-st">
+                  <div class="nh-st-l" id="stats-found-label"></div>
+                  <div class="nh-st-v" id="gv-found">0/49</div>
+                </div>
+                <div class="nh-st">
+                  <div class="nh-st-l" id="stats-errors-label"></div>
+                  <div class="nh-st-v" id="gv-err">0</div>
+                </div>
+                <div class="nh-st">
+                  <div class="nh-st-l" id="stats-time-label"></div>
+                  <div class="nh-st-v-wrap">
+                    <div class="nh-st-v" id="gv-time">0</div>
+                    <div class="nh-st-penalty" id="gv-penalty"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="nh-mission">
+              <div class="nh-miss-txt"></div>
+            </div>
+
+            <div class="nh-board-head">
+              <div class="nh-target-card">
+                <div class="nh-target-label" id="target-label"></div>
+                <div class="nh-target-value" id="gv-tgt">1</div>
+              </div>
+            </div>
+
+            <div class="nh-board-area">
+              <div class="nh-board-wrap">
+                <div class="nh-board" id="gv-board"></div>
+              </div>
+            </div>
+
+            <div class="nh-msg" id="gv-msg"></div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div class="nh-bottom">
+      <div class="nh-bottom-stat">
+        <strong id="sb-done">0 / 0</strong>
+        <span id="bottom-clearance-label"></span>
+      </div>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
